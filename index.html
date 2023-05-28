@@ -1,0 +1,433 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script>
+      import { gsap } from "gsap";
+    </script>
+    <link rel="shortcut icon" type="image/png" href="/src/img/jbfavicon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/jzg1itc.css">
+  <link rel="stylesheet" href="https://use.typekit.net/jzg1itc.css">
+  <link rel="stylesheet" href="https://use.typekit.net/jzg1itc.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://kit.fontawesome.com/6e807f3e71.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="wrapper bg-cream" x-data="{ openMenu : false }" :class="openMenu ? 'overflow-hidden' : 'overflow-visible' ">
+  
+<!--Navigation bar-->
+<div id="nav-placeholder"></div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("nav.html");
+});
+</script>
+<!--end of Navigation bar-->
+
+<!-- Socials -->
+<div class="middle">
+  <div class="sm-container invisible lg:visible">
+    <i class="show-btn text-center content-center tracking-widest h-8 w-32 border-sienna rounded-xl"><span class="font-athelas uppercase">Socials</span></i>
+    <div class="sm-menu">
+      <a href="https://www.linkedin.com/in/joshua-bundren-9921bb205/" target="blank"><i class="fab fa-linkedin-in h-12 w-12 m-1" style="font-size: 28px; border-width: 1.5px; border-radius: 50%; border-color: #EE871A;"></i></a>
+      <a href="https://www.instagram.com/josh.bundren/" target="blank"><i class="fab fa-instagram h-12 w-12 m-1" style="font-size: 28px; border-width: 1.5px; border-radius: 50%; border-color: #EE871A;"></i></a>
+      <a href="https://www.youtube.com/channel/UCBf0TZ58loDm8YkSdoxiCOw/featured" target="blank"><i class="fab fa-youtube h-12 w-12 m-1" style="font-size: 28px; border-width: 1.5px; border-radius: 50%; border-color: #EE871A;"></i></a>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(".show-btn").click(function(){
+    $(".sm-menu").fadeToggle("fast");
+  });
+</script>
+
+
+
+
+<!-- Main Header -->
+<section class="flex flex-col pt-10 md:pt-0 lg:pt-0 md:flex-row lg:flex-row justify-center items-center h-screen w-full">
+     <div class="flex-col">
+      <div class="heading1">
+        <div>
+        <span class="font-cardo text-sienna text-4xl md:text-7xl">
+         Hey, my <br> name is <span class="Josh font-bold uppercase">Josh.</span><br>
+        </span>
+        </div>
+            <style> 
+                .Josh{
+                    background: -webkit-linear-gradient(45deg, #faa018, #CE7A28);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                   }
+             </style>
+        </div>
+             <div class="heading2">
+               <span class="font-raleway text-lg leading-7 text-sienna tracking-wide"><br>I am a brand designer and front-end developer<br>from the United States.
+               </span>
+              </div>
+        </div>
+        <div class="homeprofile">
+          <img src="../src/img/joshbundren.png" alt="joshbundren" class="object-cover pr-16 md:pr-0 lg:pr-0 w-96"></img>
+        </div>
+</section>
+
+<!--* Projects -->
+<main>
+  <div class="workbox">
+    <a name="mywork"></a>
+    <span class="work flex justify-center items-center font-athelas tracking-widest uppercase font-semibold text-4xl sm:pt-0 md:pt-0 lg:pt-0 pb-8 text-lightersienna overflow-hidden">
+      Work
+    </span>
+  </div>
+    <div class="container">
+        <div class="mt-5 lg:pl-20 lg:pr-20 pb-10 grid grid-cols-1 justify-center md:grid-cols-3 lg:grid-cols-3 gap-x-20 gap-y-10">
+        
+          <div class="card">
+            <button class="modal-open projborder hover:shadow-lg h-96 w-96"> 
+            <img src="/src/img/vitanova.jpg" alt="vitanova" class="card_image h-full w-full object-cover">
+            </button>
+            <div class="m-4 pt-3">
+              <span class="card_title font-bold font-raleway text-sienna tracking-wider">Vita Nova</span>
+              <span class="card_copy block font-raleway text-charcoal text-sm leading-7 pt-2">Brand Design, Webflow Development, Custom Website Design</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <button class="projborder hover:shadow-lg h-96 w-96"> 
+            <img src="/src/img/freestyle.jpg" alt="vitanova" class="card_image h-full w-full object-cover">
+            </button>
+            <div class="m-4 pt-3">
+              <span class="card_title font-bold font-raleway text-sienna tracking-wider">Freestyle</span>
+              <span class="card_copy block font-raleway text-charcoal text-sm leading-7 pt-2">Webflow Development, Custom Website Design</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <button class="card projborder hover:shadow-lg h-96 w-96"> 
+            <img src="/src/img/art.jpg" alt="vitanova" class="card_image h-full w-full object-cover">
+            </button>
+            <div class="m-4 pt-3">
+              <span class="card_title font-bold font-raleway text-sienna tracking-wider">Art</span>
+              <span class="card_copy block font-raleway text-charcoal text-sm leading-7 pt-2">Drawings</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <button class="card projborder hover:shadow-lg h-96 w-96"> 
+            <img src="/src/img/logos.jpg" alt="vitanova" class="card_image h-full w-full object-cover">
+            </button>
+            <div class="m-4 pt-3">
+              <span class="card_title font-bold font-raleway text-sienna tracking-wider">Logos</span>
+              <span class="card_copy block font-raleway text-charcoal text-sm leading-7 pt-2">Brand Design</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <button class="modal-open card projborder hover:shadow-lg h-96 w-96"> 
+            <img src="/src/img/oldwebsite.jpg" alt="vitanova" class="card_image h-full w-full object-cover">
+            </button>
+            <div class="m-4 pt-3">
+              <span class="card_title font-bold font-raleway text-sienna tracking-wider">Old Portfolio Website</span>
+              <span class="card_copy block font-raleway text-charcoal text-sm leading-7 pt-2">Webflow Development</span>
+            </div>
+          </div>
+        </div>
+    </div>  
+    
+
+<script>
+
+
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.workbox',
+  },
+});
+tl.from(".work", {scale: .9, opacity: 0, duration: 1, y: 150}, "-=1")
+
+
+/* Projects-In  */
+
+gsap.defaults({ease: "expo.out"});
+gsap.set(".card", {y: 150, opacity: 0, scale: 0.9});
+ScrollTrigger.batch(".card", {
+  start: "top bottom+=150",
+  onEnter: batch => gsap.to(batch, {y: 0, stagger: 0.2, duration: 1, opacity: 1, scale: 1})
+});
+
+</script>
+
+<!--Modal-->
+<div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+  <div class="modal-overlay absolute w-full h-full bg-cream"></div>
+
+  <div class="modal-container fixed w-full h-full z-50 overflow-auto ">
+    
+	<div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 pt-10 pr-8 text-black text-sm z-50">
+      
+      <svg class="fill-current" width="60" height="60" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5"><path style="fill:none" d="M0 0h50v50H0z"/><circle cx="25.177" cy="25.177" r="22.823" style="fill:none;stroke:#cd7a28;stroke-width:2.56px"/><path d="m14.572 15.35 21.27 21.27M35.842 15.35l-21.27 21.27" style="fill:none;stroke:#cd7a28;stroke-width:1.53px"/></svg>
+    </div>
+
+    <!-- Add margin if you want to see grey behind the modal-->
+    <div class="modal-content relative h-full w-full overflow-auto container mx-auto text-left">
+     
+	  <!--Title-->
+    
+  <div class="flex flex-col justify-left items-start pl-44 pt-20 pb-10 overflow-hidden">
+    <div class="flex justify-between pb-2">
+      <span class="text-sienna font-athelas text-5xl font-regular pt-14">Vita Nova<br>
+      </span>
+    </div>
+  
+    <div class="flex sm:flex-col lg:flex-row pt-4 pb-5 divide-x divide-sienna">
+      <div class="pr-7">
+        <span class="text-sienna font-raleway text-md font-regular pt-5 leading-7 tracking-wider">Brand Design, Webflow Development,<br> Custom Website Design</span>
+      </div>
+      <div class="pl-7 pr-7">
+        <button class="text-sienna font-raleway text-md font-regular tracking-wider hover:text-lightersienna">
+          <a href="https://www.vitanovaclothing.co" target="blank">https://www.vitanovaclothing.co<i style="font-size: 28px;"></i></a>
+      </button>
+      </div>
+      <div class="pl-7 pr-7">
+        <button>
+          <a href="https://www.instagram.com/officialvitanova/" target="blank"><i class="fab fa-instagram h-12 w-12 m-1 text-sienna hover:text-lightersienna" style="font-size: 28px;"></i></a>
+        </button>
+        <button>
+          <a href="https://www.youtube.com/channel/UCw7I-IuH8Y86WWZWWE-iysQ" target="blank"><i class="fab fa-youtube h-12 w-12 m-1 text-sienna hover:text-lightersienna" style="font-size: 28px;"></i></a>
+        </button>
+        <button>
+          <a href="https://www.tiktok.com/@vitanovaclothing?" target="blank"><i class="fab fa-tiktok h-12 w-12 m-1 text-sienna hover:text-lightersienna" style="font-size: 28px;"></i></a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+      <!--*Body-->
+      <img src="/src/img/vitanova/vn1.jpg" alt="vitanova1" class="object-cover drop-shadow-2xl">
+
+      <div class="flex justify-center items-center content-center mr-36 ml-36 pt-10">
+      <p class="font-raleway text-lg font-medium text-charcoal leading-10 p-5 tracking-wider">Vita Nova was founded by Asher Schmitz (left) and Josh Bundren (right) in San Diego, California. Having a desire to start some sort of brand, they both came up with the idea of Vita Nova (New Life in Latin) during the summer of 2021. They created a brand centered around the message Asher lives by: which is to live life to the fullest and live out your purpose because you never know if today could be your last. As a brand new company, the two of them are continuing to work hard to spread their message, inspiring others to search for their purpose and become who they were made to be through their unique clothing line.</p>
+      <p class="font-raleway text-md font-medium text-charcoal leading-7 p-8 tracking-wider">Toward the end of July, I began working on the backbone of an idea me and my friend Asher Schmitz created. I immediately turned to Webflow and taught myself how to build a website template from scratch. Many long, rigorous days and some 250+ hours later, the website was near completion.</p>
+      </div>
+
+    <div class="w-full flex justify-center items-center pt-16 pb-16 drop-shadow-2xl">
+        <img src="/src/img/vitanova/asherjosh.jpg" alt="asherjosh" class="object-cover ajwidth">
+    </div>
+
+    <div class="w-full flex justify-center items-center pt-16 pb-16">
+        <img src="/src/img/vitanova/vn2.jpg" alt="vitanova2" class="object-cover mwidth">
+    </div>
+
+    <div class="w-full flex justify-center items-center pt-16 pb-16">
+      <img src="/src/img/vitanova/vn3.jpg" alt="vitanova3" class="object-cover mwidth">
+    </div>
+
+    <div class="w-full flex justify-center items-center pt-16 pb-16">
+      <img src="/src/img/vitanova/vn4.jpg" alt="vitanova4" class="object-cover mwidth">
+    </div>
+
+      <div class="w-full flex justify-center items-center pt-16 pb-16">
+      <img src="/src/img/vitanova/vn5.jpg" alt="vitanova5" class="object-cover mwidth">
+    </div>
+
+    <div class="w-full flex justify-center items-center pt-16 pb-16">
+      <img src="/src/img/vitanova/vn6.jpg" alt="vitanova6" class="object-cover mwidth">
+    </div>
+
+    <div class="pl-32 pt-5 pb-3">
+      <div class="flex justify-between pb-2">
+        <span class="text-sienna font-athelas text-5xl font-regular pt-14">Logo Process:<br>
+        </span>
+      </div>
+    </div>
+
+    <div class="w-full flex justify-center items-center pt-16 pb-16">
+      <img src="/src/img/vitanova/vn7.jpg" alt="vitanova7" class="object-cover mwidth">
+    </div>
+
+    <div class="w-full flex justify-center items-center pt-16 pb-16">
+      <img src="/src/img/vitanova/vn8.png" alt="vitanova8" class="object-cover mwidth">
+    </div>
+
+    <div class="w-full flex justify-center items-center pt-16 pb-16">
+      <img src="/src/img/vitanova/vn9.jpg" alt="vitanova9" class="object-cover mwidth">
+    </div>
+
+    <div class="w-full flex justify-center items-center pt-16 pb-16">
+      <img src="/src/img/vitanova/vn10.jpg" alt="vitanova10" class="object-cover mwidth">
+    </div>
+
+    <div class="w-full flex justify-center items-center pt-16 pb-16">
+      <img src="/src/img/vitanova/vn11.jpg" alt="vitanova11" class="object-cover mwidth">
+    </div>
+      
+    <div class="w-full flex justify-center items-center pt-16 pb-16">
+      <img src="/src/img/vitanova/vn12.png" alt="vitanova12" class="object-cover mwidth">
+    </div>
+
+    <div class="w-full flex justify-center items-center pt-16 pb-16">
+      <img src="/src/img/vitanova/vn13.jpg" alt="vitanova13" class="object-cover twoimagewidth">
+      <img src="/src/img/vitanova/vn14.png" alt="vitanova14" class="object-cover twoimagewidth">
+    </div>
+
+    <div class="w-full flex justify-center items-center pt-16 pb-16">
+      <img src="/src/img/vitanova/vn15.jpg" alt="vitanova15" class="object-cover mwidth">
+    </div>
+
+    <div class="w-full flex justify-center items-center pt-16 pb-16">
+      <img src="/src/img/vitanova/vn16.jpg" alt="vitanova16" class="object-cover mwidth">
+    </div>
+
+    <div class="w-full flex justify-center items-center pt-16 pb-16">
+      <img src="/src/img/vitanova/vn17.jpg" alt="vitanova17" class="object-cover mwidth">
+    </div>
+
+      <!--Footer-->
+      <div class="flex justify-end pt-2">
+        <button class="modal-close px-4 font-cardo text-2xl uppercase bg-sienna p-3 rounded-lg text-white hover:bg-lightersienna">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!--* Footer -->
+      <div class="absolute z-1 container mx-auto h-100 min-w-full bg-sienna">
+        <div>
+          <div class="flex justify-center pt-5">
+            <svg class="h-12 w-12" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h50v50H0z"/><clipPath id="a"><path d="M0 0h50v50H0z"/></clipPath><g clip-path="url(#a)"><path d="M41.1 13.954a.85.85 0 0 0-.919-.777l-32.966 2.76a.851.851 0 0 0-.777.919l.142 1.696a.851.851 0 0 0 .919.777l32.966-2.76a.851.851 0 0 0 .777-.919l-.142-1.696Z" style="fill:#fff"/><use xlink:href="#b" x="16" y="20" width="34" height="7"/><use xlink:href="#c" x="30" y="26" width="20" height="6"/><path d="M23.183 15.27a.852.852 0 0 0-.851.851v21.316c0 .47.382.851.851.851h1.703a.852.852 0 0 0 .851-.851V16.121a.852.852 0 0 0-.851-.851h-1.703ZM30.948 23.193a.851.851 0 0 0-.851.851v13.393c0 .47.381.851.851.851h1.702c.47 0 .851-.381.851-.851V24.044a.851.851 0 0 0-.851-.851h-1.702ZM47.242 20.592a.852.852 0 0 0-.851.851v15.994c0 .47.382.851.851.851h1.702c.47 0 .851-.381.851-.851V21.443a.852.852 0 0 0-.851-.851h-1.702Z" style="fill:#fff"/><path d="M46.713 21a.323.323 0 0 0-.323.323v.647c0 .178.145.323.323.323h2.758a.323.323 0 0 0 .323-.323v-.647a.323.323 0 0 0-.323-.323h-2.758ZM24.54 35.733a.852.852 0 0 0-.851-.851H.851a.851.851 0 0 0-.851.851v1.702c0 .469.381.851.851.851h22.838a.852.852 0 0 0 .851-.851v-1.702ZM48.947 35.733a.851.851 0 0 0-.851-.851H31.325a.852.852 0 0 0-.852.851v1.702c0 .469.382.851.852.851h16.771c.47 0 .851-.382.851-.851v-1.702Z" style="fill:#fff"/></g><defs><image id="b" width="34" height="7" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAHCAYAAABtJp9HAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAm0lEQVQokb3PPQ4BURSG4feMaegEswCVXdiIxdgBvd0pjb9GoRivxsiNMMkM8SUn36mee0/wp6g5MAYKYPKYAhgBm/wLuPeAa/Bdp/sQiA9c//kRNUvgJjyFs66HJFkBa9SlWqqV/89VnQOEegEGP7gMoAL2wA4oG7rezxEhQA5sgVkDfGiAXvtUw20T6hRYJA+k+DEibl3gtrkD55O4eII+TtEAAAAASUVORK5CYII="/><image id="c" width="20" height="6" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAdUlEQVQYlaXOMQrCUBRE0fMhYq1EWysbl2PnUtyEW3A5uhaVYG8xNl8IASXEae4U9z2GP5OkJFkm2UL5Ii2wwrqy34ds0dTTU5NkjjN2VWoxmzi4a7DHYeKDYa4NuhFi8MQdt8p+//BSkhQcsfkhPkoprzET37GKKh7g6d3lAAAAAElFTkSuQmCC"/></defs></svg>
+          </div>
+
+      <div class="flex flex-row justify-center pt-10">
+            <ul>
+        <div class="flex flex-row">
+          <div>
+            <li class="font-minion text-xl">
+              <a href="index.html" class="p-3">
+                <span class="hover:bg-lightersienna hover:text-orange-300 rounded-2xl p-3">
+                  Home
+                </span>
+              </a>
+            </li>
+          </div>
+          <div>
+            <li class="font-minion text-xl">
+              <a href="index.html#mywork" class="p-3">
+                <span class="hover:bg-lightersienna hover:text-orange-300 rounded-2xl p-3">
+                  Work
+                </span>
+              </a>
+            </li>
+          </div>
+          <div>
+            <li class="font-minion text-xl">
+              <a href="about.html" class="p-3">
+                <span class="hover:bg-lightersienna hover:text-orange-300 rounded-2xl p-3">
+                  About
+                </span>
+              </a>
+            </li>
+          </div>
+          <div>
+            <li class="font-minion text-xl">
+              <a href="contact.html" class="p-3">
+                <span class="hover:bg-lightersienna hover:text-orange-300 rounded-2xl p-3">
+                  Contact
+                </span>
+              </a>
+            </li>
+          </div>
+        </div>
+            </ul>
+      </div>
+          <span class="text-white font-athelas text-3xl leading-10 flex justify-center mt-5 pt-5 pb-5 text-center">Let's work together! <br>
+            Happily accepting clients :)
+          </span>
+        </div>
+        <div class="flex justify-center font-athelas text-sienna text-2xl">
+          <span class="align-middle w-auto bg-white rounded-2xl mt-5 pt-3 pb-3 p-8">
+            jwbundren@gmail.com
+          </span>
+        </div>
+        <span class="flex justify-center font-minion text-white pt-16 pb-4">
+          ©2022 Josh Bundren
+        </span>
+      </div>    
+    </main>
+  </div>
+
+<!-- Modal Script -->
+  <script>
+    var openmodal = document.querySelectorAll('.modal-open')
+    for (var i = 0; i < openmodal.length; i++) {
+      openmodal[i].addEventListener('click', function(event){
+      event.preventDefault()
+      toggleModal()
+      })
+    }
+    
+    const overlay = document.querySelector('.modal-overlay')
+    overlay.addEventListener('click', toggleModal)
+    
+    var closemodal = document.querySelectorAll('.modal-close')
+    for (var i = 0; i < closemodal.length; i++) {
+      closemodal[i].addEventListener('click', toggleModal)
+    }
+    
+    document.onkeydown = function(evt) {
+      evt = evt || window.event
+      var isEscape = false
+      if ("key" in evt) {
+      isEscape = (evt.key === "Escape" || evt.key === "Esc")
+      } else {
+      isEscape = (evt.keyCode === 27)
+      }
+      if (isEscape && document.body.classList.contains('modal-active')) {
+      toggleModal()
+      }
+    };
+    
+    
+    function toggleModal () {
+      const body = document.querySelector('body')
+      const modal = document.querySelector('.modal')
+      modal.classList.toggle('opacity-0')
+      modal.classList.toggle('pointer-events-none')
+      body.classList.toggle('modal-active')
+    }
+
+  </script>
+
+<!-- Cursors + Script -->
+
+  <div class="cursor z-10"></div>
+  <div class="cursor2 z-10"></div>
+
+  <script>
+    var cursor = document.querySelector(".cursor");
+    var cursor2 = document.querySelector(".cursor2");
+    document.addEventListener("mousemove",function(e){
+      cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+    });
+  </script>
+  
+  
+
+
+
+</body>
+</html>
